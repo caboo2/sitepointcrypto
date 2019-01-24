@@ -48,7 +48,7 @@ function decrypt_message($message,$asym_key)
     // Extract the Symmetric Key  
     $len = substr($message,0,3); 
     $len = hexdec($len);                        
-    $sym_key = substr($message,0,$len);
+    $sym_key = substr($message,3,$len);
     
     //Extract the encrypted message
     $message = substr($message,3);
